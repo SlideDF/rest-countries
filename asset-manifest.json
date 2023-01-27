@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/rest-countries/static/css/main.7385bd21.css",
-    "main.js": "/rest-countries/static/js/main.0e66cca1.js",
+    "main.js": "/rest-countries/static/js/main.f3a7e9fd.js",
     "static/media/NunitoSans-Bold.ttf": "/rest-countries/static/media/NunitoSans-Bold.022586a78ea7c9bee9da.ttf",
     "static/media/NunitoSans-Black.ttf": "/rest-countries/static/media/NunitoSans-Black.b6a9ed3db8aa0a3a38d6.ttf",
     "static/media/NunitoSans-Regular.ttf": "/rest-countries/static/media/NunitoSans-Regular.a427ddbe4dc20889d6e0.ttf",
     "index.html": "/rest-countries/index.html",
     "main.7385bd21.css.map": "/rest-countries/static/css/main.7385bd21.css.map",
-    "main.0e66cca1.js.map": "/rest-countries/static/js/main.0e66cca1.js.map"
+    "main.f3a7e9fd.js.map": "/rest-countries/static/js/main.f3a7e9fd.js.map"
   },
   "entrypoints": [
     "static/css/main.7385bd21.css",
-    "static/js/main.0e66cca1.js"
+    "static/js/main.f3a7e9fd.js"
   ]
 }
