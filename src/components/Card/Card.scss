@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    margin: 20px;
 }
 
 .flag {
@@ -29,4 +28,10 @@
 
 .data-details {
     margin-left: 8px;
+}
+
+@media screen and (min-width: 750px) {
+    .card {
+        max-width: 500px;
+    }
 }

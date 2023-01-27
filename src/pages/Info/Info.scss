@@ -11,10 +11,12 @@
 
 .countrie-flag {
     margin: 60px 10px;
+    max-height: 500px;
 }
 
 .countrie-detail {
     margin: 40px 10px;
+    flex-grow: 1;
 }
 
 .countrie-name {
@@ -52,4 +54,43 @@
     padding: 10px 20px; 
     margin-right: 5px;
     margin-bottom: 5px;
+}
+
+@media screen and (min-width: 1000px) {
+    .countrie-info {
+        margin: 40px;
+    }
+    
+    .countrie-flag {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .countrie-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .countrie-flag {
+        margin-right: 80px;
+        flex-grow: 1;
+    }
+
+    .countrie-detail {
+        margin: 0;
+        max-width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .details-content {
+        max-width: 50%;
+    }
 }

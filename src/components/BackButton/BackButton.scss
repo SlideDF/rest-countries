@@ -13,3 +13,9 @@
         background: transparent;
     }
 }
+
+@media screen and (min-width: 1000px) {
+    .back-button {
+        margin: 20px 40px;
+    }
+}

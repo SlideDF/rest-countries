@@ -45,41 +45,43 @@ const Info = () => {
                         <div className='countrie-detail'>
                             <h1 className='countrie-name'>{countrie?.translations.fra.common}</h1>
 
-                            <div className='details-content'>
-                                <div className='details'>
-                                    <p className='name-details'>Native Name:</p>
-                                    <p className='data-details'>{nativeName}</p>
+                            <div className='content'>
+                                <div className='details-content'>
+                                    <div className='details'>
+                                        <p className='name-details'>Native Name:</p>
+                                        <p className='data-details'>{nativeName}</p>
+                                    </div>
+                                    <div className='details'>
+                                        <p className='name-details'>Population:</p>
+                                        <p className='data-details'>{new Intl.NumberFormat('de-DE').format(countrie?.population)}</p>
+                                    </div>
+                                    <div className='details'>
+                                        <p className='name-details'>Region:</p>
+                                        <p className='data-details'>{countrie?.region}</p>
+                                    </div>
+                                    <div className='details'>
+                                        <p className='name-details'>Sub Region:</p>
+                                        <p className='data-details'>{countrie?.subregion}</p>
+                                    </div>
+                                    <div className='details'>
+                                        <p className='name-details'>Capital:</p>
+                                        <p className='data-details'>{countrie?.capital}</p>
+                                    </div>
                                 </div>
-                                <div className='details'>
-                                    <p className='name-details'>Population:</p>
-                                    <p className='data-details'>{new Intl.NumberFormat('de-DE').format(countrie?.population)}</p>
-                                </div>
-                                <div className='details'>
-                                    <p className='name-details'>Region:</p>
-                                    <p className='data-details'>{countrie?.region}</p>
-                                </div>
-                                <div className='details'>
-                                    <p className='name-details'>Sub Region:</p>
-                                    <p className='data-details'>{countrie?.subregion}</p>
-                                </div>
-                                <div className='details'>
-                                    <p className='name-details'>Capital:</p>
-                                    <p className='data-details'>{countrie?.capital}</p>
-                                </div>
-                            </div>
 
-                            <div className='details-content'>
-                                <div className='details'>
-                                    <p className='name-details'>Top Level Domain:</p>
-                                    <p className='data-details'>{countrie?.tld}</p>
-                                </div>
-                                <div className='details'>
-                                    <p className='name-details'>Currencies:</p>
-                                    <p className='data-details'>{currencie}</p>
-                                </div>
-                                <div className='details'>
-                                    <p className='name-details'>Languages:</p>
-                                    <p className='data-details'>{languages}</p>
+                                <div className='details-content'>
+                                    <div className='details'>
+                                        <p className='name-details'>Top Level Domain:</p>
+                                        <p className='data-details'>{countrie?.tld}</p>
+                                    </div>
+                                    <div className='details'>
+                                        <p className='name-details'>Currencies:</p>
+                                        <p className='data-details'>{currencie}</p>
+                                    </div>
+                                    <div className='details'>
+                                        <p className='name-details'>Languages:</p>
+                                        <p className='data-details'>{languages}</p>
+                                    </div>
                                 </div>
                             </div>
 
