@@ -30,7 +30,7 @@ const Info = () => {
             <Header />
 
             <main>
-                <Link to={'/'} style={{textDecoration: 'none', color: color, display: 'flex', width: 'max-content'}}>
+                <Link to={'/rest-countries/'} style={{textDecoration: 'none', color: color, display: 'flex', width: 'max-content'}}>
                     <BackButton />
                 </Link>
 
