@@ -35,15 +35,21 @@ const { actions, reducer } = createSlice({
         resolved: {
             reducer: (draft, action) => {
                 if(draft.status === 'pending' || draft.status === 'updating') {
-                    draft.nativeName = Object.values(action.payload.data.name.nativeName).slice(-1)[0].common
+                    if(action.payload.data.name.nativeName) {
+                        draft.nativeName = Object.values(action.payload.data.name.nativeName).slice(-1)[0].common
+                    }
 
-                    draft.currencie = Object.values(action.payload.data.currencies).slice(-1)[0].name
+                    if(action.payload.data.currencies) {
+                        draft.currencie = Object.values(action.payload.data.currencies).slice(-1)[0].name
+                    }
 
-                    const languages = Object.values(action.payload.data.languages)
-
-                    draft.languages = languages.reduce((accumulator, currentValue) => {
-                        return accumulator + ', ' + currentValue
-                    }) 
+                    if(action.payload.data.languages) {
+                        const languages = Object.values(action.payload.data.languages)
+                        
+                        draft.languages = languages.reduce((accumulator, currentValue) => {
+                            return accumulator + ', ' + currentValue
+                        }) 
+                    }
 
                     draft.borders = action.payload.border
 
@@ -82,16 +88,18 @@ export const fetchCountrie = (countrieCode) => {
             const response = await fetch(`https://restcountries.com/v3.1/alpha/${countrieCode}`)
             const data = await response.json()
 
-            const border = []
+            let border = []
 
-            for(let i = 0; i < data[0].borders.length; i++) {
-                const responseBorder = await fetch(`https://restcountries.com/v3.1/alpha/${data[0].borders[i]}`)
-
-                const dataBorder = await responseBorder.json()
-
-                border.push({name: dataBorder[0].name.common, code: dataBorder[0].cca2})
+            if(data[0].borders) {
+                for(let i = 0; i < data[0].borders.length; i++) {
+                    const responseBorder = await fetch(`https://restcountries.com/v3.1/alpha/${data[0].borders[i]}`)
+                    
+                    const dataBorder = await responseBorder.json()
+                    
+                    border.push({name: dataBorder[0].name.common, code: dataBorder[0].cca2})
+                }
             }
-            
+                
             dispatch(resolved({data: data[0], border}))
 
         } catch(error) {
