@@ -34,7 +34,7 @@ const Home = () => {
         <div className='countries-wrapper'>
           {countries.map((countrie, index) => {
             return (
-              <Link key={`${index}-${countrie.name.common}`} to={`/${countrie.cca2}`} style={{textDecoration: 'none'}} >
+              <Link key={`${index}-${countrie.name.common}`} to={`/rest-countries/${countrie.cca2}`} style={{textDecoration: 'none'}} >
                 <Card countrie={countrie} />
               </Link>
             )

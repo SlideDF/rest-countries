@@ -88,7 +88,7 @@ const Info = () => {
                                 <div className='borders'>
                                     {borders.map((data, index) => {
                                         return (
-                                            <Link key={index} to={`/${data.code}`} style={{textDecoration: 'none', color: color}}>
+                                            <Link key={index} to={`/rest-countries/${data.code}`} style={{textDecoration: 'none', color: color}}>
                                                 <div className="border" style={{backgroundColor: backgroundColorElement, boxShadow: boxShadow}} >{data.name}</div>
                                             </Link>
                                         )

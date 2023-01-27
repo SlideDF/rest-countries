@@ -13,8 +13,8 @@ root.render(
     <Provider store={store}>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path={`/:id`} element={<Info />} />
+          <Route path="/rest-countries/" element={<Home />} />
+          <Route path={`/rest-countries/:id`} element={<Info />} />
         </Routes>
       </Router>
     </Provider>
